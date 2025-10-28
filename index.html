@@ -12,227 +12,184 @@
 
   <title>Abdur Raqeeb Portfolio</title>
   <style>
-    .hover-bg:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transition: 0.3s ease;
-      text-decoration: none;
-    }
 
-    @media (max-width: 768px) {
-      #Projects .d-flex.justify-content-between.gap-4 {
-        flex-direction: column !important;
-        align-items: center !important;
-        overflow-x: visible !important;
-        gap: 1.5rem !important;
-        padding-bottom: 0 !important;
-      }
+.hover-bg:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.3s ease;
+  text-decoration: none;
+}
 
-      #Projects .card {
-        width: 95% !important;
-        height: auto !important;
-        margin-bottom: 1.5rem !important;
-      }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
-      #Projects .card h3 {
-        font-size: 1.2rem !important;
-      }
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
 
-      #Projects .card p {
-        font-size: 0.9rem !important;
-      }
+.social-icons img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
 
-      #Projects .code-btn {
-        position: relative !important;
-        bottom: auto !important;
-        left: auto !important;
-        transform: none !important;
-        margin-top: 1rem !important;
-      }
-    }
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) invert(1) brightness(1.3);
+}
 
-    @media (max-width: 768px) {
-      header .nav {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-      }
+.skill-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
 
-      header .nav-link {
-        font-size: 1.1rem;
-        padding: 0.7rem 0;
-        transition: 0.3s;
-      }
+.skill-circle:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
-      header .nav-link:hover,
-      header .nav-link.active {
-        color: #ff6a00;
-        font-weight: bold;
-      }
+.skill-icon {
+  width: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
 
-      header a.fs-4 {
-        display: block;
-        text-align: center;
-        margin-bottom: 0.5rem;
-      }
-    }
+.skill-circle:hover .skill-icon {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
 
-    .social-icons img {
-      filter: brightness(0) invert(1);
-      transition: transform 0.3s ease, filter 0.3s ease;
-      cursor: pointer;
-    }
+.feature-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .social-icons img:hover {
-      transform: scale(1.2);
-      filter: brightness(0) invert(1) brightness(1.3);
-    }
+.feature-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.code-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: 0.3s ease;
+}
+
+.code-btn:hover,
+.code-btn:active {
+  background: #8e2de2;
+  color: white;
+  border-color: #8e2de2;
+}
+
+@media (max-width: 768px) {
+  header .nav {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  header .nav-link {
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    transition: 0.3s;
+  }
+
+  header .nav-link:hover,
+  header .nav-link.active {
+    color: #ff6a00;
+    font-weight: bold;
+  }
+
+  header a.fs-4 {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  #Projects .d-flex.justify-content-between.gap-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+
+  #Projects .card {
+    width: 95% !important;
+    height: auto !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #Projects .code-btn {
+    position: relative !important;
+    margin-top: 1rem !important;
+  }
+
+  .vh-100 {
+    height: auto !important;
+    padding: 3rem 0 !important;
+  }
+
+  .display-4 {
+    font-size: 2rem !important;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  #Skills .row.row-cols-2.row-cols-md-5 {
+    row-gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 1.6rem !important;
+  }
+
+  .lead {
+    font-size: 0.95rem !important;
+  }
+
+  #About img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .skill-circle {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .skill-icon {
+    width: 35px !important;
+  }
+
+  #Projects .card,
+  #Certificate .card {
+    width: 90% !important;
+  }
+}
 
 
-
-    @media (max-width: 576px) {
-
-      .display-4 {
-        font-size: 1.6rem !important;
-      }
-
-      .lead {
-        font-size: 0.95rem !important;
-      }
-
-      #About img {
-        width: 150px !important;
-        height: 150px !important;
-      }
-
-      #About .row.row-cols-1.row-cols-md-2 {
-        flex-direction: column !important;
-        gap: 2rem;
-      }
-
-      .skill-circle {
-        width: 70px !important;
-        height: 70px !important;
-      }
-
-      .skill-icon {
-        width: 35px !important;
-      }
-
-      #Projects .card {
-        width: 90% !important;
-        height: auto !important;
-        margin-bottom: 1.5rem;
-      }
-
-      #Certificate .card {
-        width: 90% !important;
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-
-      .vh-100 {
-        height: auto !important;
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-      }
-
-      header .nav {
-        flex-direction: column !important;
-        gap: 0.5rem;
-      }
-
-      #Projects .d-flex.flex-wrap,
-      #Certificate .d-flex.flex-wrap {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-
-      .card {
-        width: 90% !important;
-        min-height: auto !important;
-        margin-bottom: 2rem;
-      }
-
-      .display-4 {
-        font-size: 2rem !important;
-      }
-
-      .lead {
-        font-size: 1rem !important;
-      }
-
-      .d-flex.gap-3 {
-        gap: 1rem !important;
-      }
-
-      #Skills .row.row-cols-2.row-cols-md-5 {
-        row-gap: 1.5rem !important;
-      }
-    }
-
-    .feature-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .feature-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    .code-btn {
-      background: transparent;
-      color: white;
-      border: 1px solid white;
-      transition: 0.3s ease;
-    }
-
-    .code-btn:hover,
-    .code-btn:active {
-      background: #8e2de2;
-      color: white;
-      border-color: #8e2de2;
-    }
-
-    .skill-circle {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .skill-circle:hover {
-      transform: scale(1.2);
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .skill-icon {
-      width: 50px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .skill-circle:hover .skill-icon {
-      transform: scale(1.1);
-      filter: brightness(1.3);
-    }
   </style>
 
 </head>
 
 <body>
   <div class="container-fluid px-0 bg-dark">
-    <nav class="navbar navbar-expand-lg" style="background: #1a001a;">
+   <nav class="navbar navbar-expand-lg navbar-dark" style="background: #1a001a;">
       <div class="container-fluid">
 
-        <a href="#" class="navbar-brand fw-bold text-white">Abdur Raqeeb Portfolio</a>
+        <a class="navbar-brand fw-bold text-white">Abdur Raqeeb Portfolio</a>
 
         <!-- Hamburger button for mobile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -265,9 +222,6 @@
     </nav>
   </div>
 
-  <!-- Bootstrap JS -->
-
-
   <div class="d-flex flex-column justify-content-center align-items-center text-center text-white  p-5"
     style="height: calc(100vh - 65px); background: linear-gradient(to right, #2b1055, #000000);">
 
@@ -288,9 +242,6 @@
       </a>
       <a href="https://github.com/abdur-raqeeb2005" target="_blank">
         <img src="./images/github.svg" alt="GitHub" width="40" height="40">
-      </a>
-      <a href="https://www.instagram.com/abdur_raqeeb_02/" target="_blank">
-        <img src="./images/instagram.svg" alt="Instagram" width="40" height="40">
       </a>
       <a href="mailto:AbdurRaqeeb0207@gmail.com" target="_blank">
         <img src="./images/gmail.svg" alt="Email" width="40" height="40">
@@ -321,7 +272,7 @@
               websites. I enjoy learning new technologies and continuously improving my skills to grow in the software
               field.
             </p>
-            <a href="https://wa.me/7010930108" target="_blank" class="btn btn-primary btn-lg">Contact Me</a>
+            <a href="https://wa.me/7010930108" target="_blank" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
           </div>
 
           <div class="col">
@@ -329,7 +280,7 @@
 
               <!-- Who I Am -->
               <div
-                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover">
+                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover social-icons">
                 <img src="./images/profile.svg" alt="Who I Am" width="50" height="50" class="mb-3">
                 <h4 class="fw-semibold mb-2  text-white">Who I Am</h4>
                 <p class="text-white mb-0">I'm a BCA graduate passionate about coding and problem-solving. I enjoy
@@ -337,7 +288,7 @@
               </div>
 
               <div
-                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover">
+                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover social-icons">
                 <img src="./images/briefcase.svg" alt="Background" width="50" height="50" class="mb-3">
                 <h4 class="fw-semibold mb-2 text-white">My Background</h4>
                 <p class="text-white mb-0">Completed a 10-day Intel Internship powered by CIIC focused on AI/ML, IIoT,
@@ -345,7 +296,7 @@
               </div>
 
               <div
-                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover">
+                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover social-icons">
                 <img src="./images/lightbulb.svg" alt="Skills" width="50" height="50" class="mb-3">
                 <h4 class="fw-semibold mb-2 text-white">My Skills</h4>
                 <p class="text-white mb-0">Skilled in Python, HTML, CSS, SQL, JavaScript, with growing experience in R,
@@ -354,7 +305,7 @@
               </div>
 
               <div
-                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover">
+                class="col d-flex flex-column align-items-center text-center p-3 rounded-3 bg-white bg-opacity-10 feature-hover social-icons">
                 <img src="./images/rocket.svg" alt="Goal" width="50" height="50" class="mb-3">
                 <h4 class="fw-semibold mb-2 text-white">My Goal</h4>
                 <p class="text-white mb-0">My goal is to become a software developer, create meaningful applications,
@@ -383,35 +334,35 @@
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/python.svg" alt="Python" class="skill-icon">
+                <img src="./images/python.png" alt="Python" class="skill-icon">
               </div>
               <h5 class="mt-2">Python</h5>
             </div>
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/html5.svg" alt="HTML" class="skill-icon">
+                <img src="./images/html.png" alt="HTML" class="skill-icon">
               </div>
               <h5 class="mt-2">HTML</h5>
             </div>
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/css.svg" alt="CSS" class="skill-icon">
+                <img src="./images/css-3.png" alt="CSS" class="skill-icon">
               </div>
               <h5 class="mt-2">CSS</h5>
             </div>
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/sql.svg" alt="SQL" class="skill-icon">
+                <img src="./images/Sql.png" alt="SQL" class="skill-icon">
               </div>
               <h5 class="mt-2">SQL</h5>
             </div>
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/javascript.svg" alt="JavaScript" class="skill-icon">
+                <img src="./images/js.png" alt="JavaScript" class="skill-icon">
               </div>
               <h5 class="mt-2">JavaScript</h5>
             </div>
@@ -425,7 +376,7 @@
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/nodedotjs.svg" alt="Node.js" class="skill-icon">
+                <img src="./images/nodejs.svg" alt="Node.js" class="skill-icon">
               </div>
               <h5 class="mt-2">Node.js</h5>
             </div>
@@ -439,16 +390,16 @@
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/bootstrap.svg" alt="Bootstrap" class="skill-icon">
+                <img src="./images/django.png " alt="Bootstrap" class="skill-icon">
               </div>
-              <h5 class="mt-2">Bootstrap</h5>
+              <h5 class="mt-2">Django</h5>
             </div>
 
             <div class="col d-flex flex-column align-items-center">
               <div class="skill-circle">
-                <img src="./images/r.svg" alt="R" class="skill-icon">
+                <img src="./images/bootstrap.png" alt="R" class="skill-icon">
               </div>
-              <h5 class="mt-2">R</h5>
+              <h5 class="mt-2">Bootstrap</h5>
             </div>
 
           </div>
